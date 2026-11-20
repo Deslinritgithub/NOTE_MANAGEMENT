@@ -1,0 +1,156 @@
+
+### REGISTER
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username": "christopher",
+    "email": "christopher@gmail.com",
+    "password": "christopher@890"
+}
+
+###
+
+### LOGIN (we will implement this next)
+POST http://127.0.0.1:8000/api/login/
+Content-Type: application/json
+
+{
+    "username": "christopher",
+    "password": "christopher@890"
+}
+
+
+###
+GET http://127.0.0.1:8000/api/notes/
+Accept: application/json
+Authorization: Token c640d5d4f57508605ed590ec42bee23620e60827
+
+
+###
+POST http://127.0.0.1:8000/api/notes/
+Content-Type: application/json
+Authorization: Token c640d5d4f57508605ed590ec42bee23620e60827
+
+{
+
+    "title":"introduction to cyber",
+    "description":"the cyber era is now is getting more complicated based on the few years"
+}
+
+
+###
+GET http://127.0.0.1:8000/api/notes/2/
+Accept: application/json
+Authorization: Token c640d5d4f57508605ed590ec42bee23620e60827
+
+
+###
+PUT http://127.0.0.1:8000/api/notes/2/
+Content-Type: application/json
+Authorization: Token c640d5d4f57508605ed590ec42bee23620e60827
+
+
+{
+    
+    "title":"introduction to cyber",
+    "description":"the cyber era is now is getting more complicated based on the few years"
+}
+
+
+###
+DELETE http://127.0.0.1:8000/api/notes/2/
+Authorization: Token c640d5d4f57508605ed590ec42bee23620e60827
+
+
+
+
+###
+POST http://127.0.0.1:8000/api/logout/
+Content-Type: application/json
+Authorization: Token c640d5d4f57508605ed590ec42bee23620e60827
+
+
+###
+POST http://127.0.0.1:8000/api/jwt_login/
+Content-Type: application/json
+
+{
+   
+    "username": "jenipher",
+    "password": "jenipher@890"
+
+
+}
+
+
+#task we get empty list
+###
+POST  http://127.0.0.1:8000/api/task/register/
+Content-Type: : application/json
+Authorization: Bearer 
+
+
+###
+GET http://127.0.0.1:8000/api/task/2/
+Accept: application/json
+Authorization: Token c640d5d4f57508605ed590ec42bee23620e60827
+
+###
+POST  http://127.0.0.1:8000/api/task/
+Content-Type: application/json
+Authorization: Token c640d5d4f57508605ed590ec42bee23620e60827
+
+{
+    
+    "title":"introduction to cyber",
+    "description":"the cyber era is now is getting more complicated based on the few years"
+}
+
+
+
+
+
+
+
+#refresh token
+###
+POST  http://127.0.0.1:8000/api/refresh/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NTI0OTMyNCwiaWF0IjoxNzk1MTYyOTI0LCJqdGkiOiIzNzhiMmVlYWE5NzU0ZTJmOGQ5NzY1MjlmYjlmMzVmZSIsInVzZXJfaWQiOiIxMCJ9.5xKJD-WHK9v_G00Jr0ude6KMpCm84sIo-9lx0PmE-JI.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NTI0OTExNiwiaWF0IjoxNzk1MTYyNzE2LCJqdGkiOiI0MWI5MmFmMzY3MDM0YTFjYTA5OGE0NmE1YjE0ODY1OCIsInVzZXJfaWQiOiIxMCJ9.hQMQ3MMgVKcEVv0P2isDX3zEX6uQtFc1aJT0bwu_FOM
+
+
+{
+
+    "refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NTI0OTMyNCwiaWF0IjoxNzk1MTYyOTI0LCJqdGkiOiIzNzhiMmVlYWE5NzU0ZTJmOGQ5NzY1MjlmYjlmMzVmZSIsInVzZXJfaWQiOiIxMCJ9.5xKJD-WHK9v_G00Jr0ude6KMpCm84sIo-9lx0PmE-JI.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NTI0OTExNiwiaWF0IjoxNzk1MTYyNzE2LCJqdGkiOiI0MWI5MmFmMzY3MDM0YTFjYTA5OGE0NmE1YjE0ODY1OCIsInVzZXJfaWQiOiIxMCJ9.hQMQ3MMgVKcEVv0P2isDX3zEX6uQtFc1aJT0bwu_FOM"
+}
+
+
+#To get the retrive update delete view things,,.!
+###
+GET http://127.0.0.1:8000/api/task/1/
+Accept: application/json
+Authorization: Bearer 
+
+
+
+
+###
+PUT http://127.0.0.1:8000/api/task/1/
+Content-Type: application/json
+Authorization: Token 
+
+{
+
+    "title":"HACKATHON",
+    "description":"AN EVENT IS RUNNING COMMING WEEK LIKE REAL HACKATHON, THE INAGURATION CERMONY WILL DONE BY FIRDOZ SMITH",
+    "due_date":"01-11-2026",
+    "status":"pending"
+}
+
+
+###
+DELETE  http://127.0.0.1:8000/api/task/2/
+Authorization: Token 
+
+
